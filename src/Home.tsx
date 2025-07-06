@@ -28,11 +28,18 @@ export const Home = () => {
                     name='fullName'
                     component={TextField}
                     label='Full Name'
+                    variant='standard'
                   />
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
-                  <Field name='donationsAmount' type='number' />
+                  <Field
+                    name='donationsAmount'
+                    type='number'
+                    component={TextField}
+                    label='Donation (£)'
+                    variant='standard'
+                  />
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
