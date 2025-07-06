@@ -19,8 +19,9 @@ export const Home = () => {
           onSubmit={() => {}}
         >
           {({ values, errors }) => (
-            <Form>
-              <Grid container>
+            // If you want to keep autoComplete for the input, remove the below.
+            <Form autoComplete='off'>
+              <Grid container gap='20px'>
                 <Grid size={{ xs: 12 }}>
                   <Field name='fullName' />
                 </Grid>
