@@ -3,9 +3,11 @@ React FieldArray Form Tutorial: Using Formik, Yup and material-ui
 
 https://github.com/bmvantunes/youtube-2021-jan-field-array-formik
 https://github.com/Annie-Huang/formik-field-array
+
+https://mui.com/material-ui/getting-started/installation/
 -------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-field-array --template typescript --use-npm
 PS C:\react\formik-field-array> npm install @mui/material @emotion/react @emotion/styled
-
+PS C:\react\formik-field-array> npm install @mui/material @mui/styled-engine-sc styled-components
 
