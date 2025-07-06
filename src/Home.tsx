@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Grid } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
+import { TextField } from 'formik-mui';
 
 const INITIAL_FORM_STATE = {
   fullName: '',
@@ -23,7 +24,11 @@ export const Home = () => {
             <Form autoComplete='off'>
               <Grid container gap='20px'>
                 <Grid size={{ xs: 12 }}>
-                  <Field name='fullName' />
+                  <Field
+                    name='fullName'
+                    component={TextField}
+                    label='Full Name'
+                  />
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
