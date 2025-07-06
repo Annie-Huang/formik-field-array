@@ -6,9 +6,11 @@ https://github.com/Annie-Huang/formik-field-array
 
 https://mui.com/material-ui/getting-started/installation/
 https://formik.org/docs/overview
+https://stackworx.github.io/formik-mui/docs/guide/getting-started/
 -------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-field-array --template typescript --use-npm
 PS C:\react\formik-field-array> npm install @mui/material @emotion/react @emotion/styled
 PS C:\react\formik-field-array> npm install @mui/material @mui/styled-engine-sc styled-components
 PS C:\react\formik-field-array> npm install formik --save
+PS C:\react\formik-field-array> npm add formik formik-mui @mui/material @emotion/react @emotion/styled
