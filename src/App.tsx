@@ -1,7 +1,12 @@
 import React from 'react';
+import { Card, CardContent } from '@mui/material';
 
 function App() {
-  return <div></div>;
+  return (
+    <Card>
+      <CardContent></CardContent>
+    </Card>
+  );
 }
 
 export default App;
