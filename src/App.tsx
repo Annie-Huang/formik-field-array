@@ -1,15 +1,30 @@
 import React from 'react';
-import { Card, CardContent } from '@mui/material';
-import { Form, Formik } from 'formik';
+import { Card, CardContent, Grid } from '@mui/material';
+import { Field, Form, Formik } from 'formik';
+
+const INITIAL_FORM_STATE = {
+  fullName: '',
+  donationsAmount: 0,
+  termsAndConditions: false,
+};
 
 function App() {
   return (
     <Card>
       <CardContent>
-        <Formik initialValues={{}} onSubmit={() => {}}>
+        <Formik
+          initialValues={{
+            ...INITIAL_FORM_STATE,
+          }}
+          onSubmit={() => {}}
+        >
           {({ values, errors }) => (
             <Form>
-              <h1>Hello YouTube!</h1>
+              <Grid container>
+                <Grid size={{ xs: 12 }}>
+                  <Field name='fullName' />
+                </Grid>
+              </Grid>
 
               <pre>{JSON.stringify({ values, errors }, null, 4)}</pre>
             </Form>
