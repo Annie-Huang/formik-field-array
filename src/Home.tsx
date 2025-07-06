@@ -25,6 +25,14 @@ export const Home = () => {
                 <Grid size={{ xs: 12 }}>
                   <Field name='fullName' />
                 </Grid>
+
+                <Grid size={{ xs: 12 }}>
+                  <Field name='donationsAmount' type='number' />
+                </Grid>
+
+                <Grid size={{ xs: 12 }}>
+                  <Field name='termsAndConditions' />
+                </Grid>
               </Grid>
 
               <pre>{JSON.stringify({ values, errors }, null, 4)}</pre>
