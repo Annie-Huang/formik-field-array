@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Grid } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
-import { TextField } from 'formik-mui';
+import { CheckboxWithLabel, TextField } from 'formik-mui';
 
 const INITIAL_FORM_STATE = {
   fullName: '',
@@ -43,7 +43,12 @@ export const Home = () => {
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
-                  <Field name='termsAndConditions' />
+                  <Field
+                    name='termsAndConditions'
+                    type='checkbox'
+                    component={CheckboxWithLabel}
+                    Label={{ label: 'I accept the terms and conditions' }}
+                  />
                 </Grid>
               </Grid>
 

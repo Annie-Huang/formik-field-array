@@ -7,6 +7,9 @@ https://github.com/Annie-Huang/formik-field-array
 https://mui.com/material-ui/getting-started/installation/
 https://formik.org/docs/overview
 https://stackworx.github.io/formik-mui/docs/guide/getting-started/
+
+https://stackworx.github.io/formik-mui/docs/api/mui/#textfield
+https://stackworx.github.io/formik-mui/docs/api/mui/#checkboxwithlabel
 -------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-field-array --template typescript --use-npm
