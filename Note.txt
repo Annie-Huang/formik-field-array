@@ -6,6 +6,6 @@ https://github.com/Annie-Huang/formik-field-array
 -------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-field-array --template typescript --use-npm
-
+PS C:\react\formik-field-array> npm install @mui/material @emotion/react @emotion/styled
 
 
