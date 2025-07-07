@@ -31,9 +31,10 @@ export const Home = () => {
           {({ values, errors, isSubmitting }) => (
             // If you want to keep autoComplete for the input, remove the below.
             <Form autoComplete='off'>
-              <Grid container gap='20px'>
+              <Grid container direction='column' spacing={2}>
                 <Grid size={{ xs: 12 }}>
                   <Field
+                    fullWidth
                     name='fullName'
                     component={TextField}
                     label='Full Name'
@@ -43,6 +44,7 @@ export const Home = () => {
 
                 <Grid size={{ xs: 12 }}>
                   <Field
+                    fullWidth
                     name='donationsAmount'
                     type='number'
                     component={TextField}
