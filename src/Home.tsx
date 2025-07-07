@@ -17,7 +17,10 @@ export const Home = () => {
           initialValues={{
             ...INITIAL_FORM_STATE,
           }}
-          onSubmit={() => {}}
+          onSubmit={async (values) => {
+            console.log('my values', values);
+            return new Promise((res) => setTimeout(res, 2500));
+          }}
         >
           {({ values, errors }) => (
             // If you want to keep autoComplete for the input, remove the below.
