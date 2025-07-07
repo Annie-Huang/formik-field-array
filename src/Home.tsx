@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Grid } from '@mui/material';
+import { Button, Card, CardContent, Grid } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 
@@ -49,6 +49,12 @@ export const Home = () => {
                     component={CheckboxWithLabel}
                     Label={{ label: 'I accept the terms and conditions' }}
                   />
+                </Grid>
+
+                <Grid size={{ xs: 12 }}>
+                  <Button variant='contained' color='primary' type='submit'>
+                    Submit
+                  </Button>
                 </Grid>
               </Grid>
 
