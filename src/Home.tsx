@@ -22,7 +22,7 @@ export const Home = () => {
             return new Promise((res) => setTimeout(res, 2500));
           }}
         >
-          {({ values, errors }) => (
+          {({ values, errors, isSubmitting }) => (
             // If you want to keep autoComplete for the input, remove the below.
             <Form autoComplete='off'>
               <Grid container gap='20px'>
@@ -55,8 +55,13 @@ export const Home = () => {
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
-                  <Button variant='contained' color='primary' type='submit'>
-                    Submit
+                  <Button
+                    disabled={isSubmitting}
+                    variant='contained'
+                    color='primary'
+                    type='submit'
+                  >
+                    {isSubmitting ? 'Submitting' : 'Submit'}
                   </Button>
                 </Grid>
               </Grid>
