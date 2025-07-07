@@ -8,12 +8,23 @@ import {
 } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
+import * as Yup from 'yup';
+import { boolean, number, string } from 'yup';
 
 const INITIAL_FORM_STATE = {
   fullName: '',
   donationsAmount: 0,
   termsAndConditions: false,
 };
+
+const FORM_VALIDATION = Yup.object().shape({
+  fullName: string()
+    .required('Your name is required')
+    .min(2, 'Your name needs to be at least 3 characters')
+    .max(10, 'Your name needs to be at most 10 characters'),
+  donationsAmount: number().required().min(10), // will use the default of 'donationsAmount must be greater than or equal to 10' for min(10)
+  termsAndConditions: boolean().required().isTrue(),
+});
 
 export const Home = () => {
   return (
@@ -23,6 +34,7 @@ export const Home = () => {
           initialValues={{
             ...INITIAL_FORM_STATE,
           }}
+          validationSchema={FORM_VALIDATION}
           onSubmit={async (values) => {
             console.log('my values', values);
             return new Promise((res) => setTimeout(res, 2500));
