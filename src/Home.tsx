@@ -1,5 +1,11 @@
 import React from 'react';
-import { Button, Card, CardContent, Grid } from '@mui/material';
+import {
+  Button,
+  Card,
+  CardContent,
+  CircularProgress,
+  Grid,
+} from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 
@@ -60,6 +66,11 @@ export const Home = () => {
                     variant='contained'
                     color='primary'
                     type='submit'
+                    startIcon={
+                      isSubmitting ? (
+                        <CircularProgress size='0.9rem' />
+                      ) : undefined
+                    }
                   >
                     {isSubmitting ? 'Submitting' : 'Submit'}
                   </Button>
