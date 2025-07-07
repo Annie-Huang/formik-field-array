@@ -17,3 +17,5 @@ PS C:\react\formik-field-array> npm install @mui/material @emotion/react @emotio
 PS C:\react\formik-field-array> npm install @mui/material @mui/styled-engine-sc styled-components
 PS C:\react\formik-field-array> npm install formik --save
 PS C:\react\formik-field-array> npm add formik formik-mui @mui/material @emotion/react @emotion/styled
+PS C:\react\formik-field-array> npm install yup
+
