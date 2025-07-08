@@ -5,6 +5,7 @@ import {
   CardContent,
   CircularProgress,
   Grid,
+  Typography,
 } from '@mui/material';
 import { Field, FieldArray, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
@@ -80,7 +81,13 @@ export const Home = () => {
 
                   <FieldArray name='donations'>
                     {({ push, remove }) => (
-
+                      <React.Fragment>
+                        <Grid>
+                          <Typography variant='body2'>
+                            All your donations
+                          </Typography>
+                        </Grid>
+                      </React.Fragment>
                     )}
                   </FieldArray>
 
