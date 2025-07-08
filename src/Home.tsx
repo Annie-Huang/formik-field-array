@@ -91,10 +91,21 @@ export const Home = () => {
                         {values.donations.map((_, index) => (
                           <Grid container key={index} spacing={2}>
                             <Grid>
-                              <Field name={`donations.${index}.institution`} />
+                              <Field
+                                name={`donations.${index}.institution`}
+                                component={TextField}
+                                label='Institution'
+                                variant='standard'
+                              />
                             </Grid>
                             <Grid>
-                              <Field name={`donations.${index}.percentage`} />
+                              <Field
+                                name={`donations.${index}.percentage`}
+                                component={TextField}
+                                type='number'
+                                label='Percentage (%)'
+                                variant='standard'
+                              />
                             </Grid>
                           </Grid>
                         ))}
