@@ -69,9 +69,14 @@ export const Home = () => {
                     />
                   </Grid>
 
-                  <Field name='donations[0]' />
-                  <Field name='donations[1]' />
-                  <Field name='donations[2]' />
+                  {/*<Field name='donations[0]' />*/}
+                  {/*<Field name='donations[1]' />*/}
+                  {/*<Field name='donations[2]' />*/}
+
+                  <Field name='donations.0.institution' />
+                  <Field name='donations[0].percentage' />
+                  <Field name='donations[1].institution' />
+                  <Field name='donations[1].percentage' />
 
                   <Grid size={{ xs: 12 }}>
                     <Field
