@@ -107,6 +107,12 @@ export const Home = () => {
                                 variant='standard'
                               />
                             </Grid>
+
+                            <Grid>
+                              <Button onClick={() => remove(index)}>
+                                Delete
+                              </Button>
+                            </Grid>
                           </Grid>
                         ))}
                       </React.Fragment>
