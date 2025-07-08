@@ -16,6 +16,7 @@ const INITIAL_FORM_STATE = {
   fullName: '',
   donationsAmount: 0,
   termsAndConditions: false,
+  donations: [],
 };
 
 const FORM_VALIDATION = Yup.object().shape({
@@ -42,7 +43,7 @@ export const Home = () => {
           }}
         >
           {({ values, errors, isSubmitting }) => {
-            console.log('errors', errors);
+            // console.log('errors', errors);
             return (
               // If you want to keep autoComplete for the input, remove the below.
               <Form autoComplete='off'>
@@ -67,6 +68,10 @@ export const Home = () => {
                       variant='standard'
                     />
                   </Grid>
+
+                  <Field name='donations[0]' />
+                  <Field name='donations[1]' />
+                  <Field name='donations[2]' />
 
                   <Grid size={{ xs: 12 }}>
                     <Field
