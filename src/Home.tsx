@@ -10,6 +10,7 @@ import { Field, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import * as Yup from 'yup';
 import { boolean, number, string } from 'yup';
+import './Home.css';
 
 const INITIAL_FORM_STATE = {
   fullName: '',
@@ -74,6 +75,9 @@ export const Home = () => {
                       component={CheckboxWithLabel}
                       Label={{
                         label: 'I accept the terms and conditions',
+                        className: errors.termsAndConditions
+                          ? 'errorColor'
+                          : undefined,
                       }}
                     />
                   </Grid>
