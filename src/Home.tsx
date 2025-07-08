@@ -87,6 +87,10 @@ export const Home = () => {
                             All your donations
                           </Typography>
                         </Grid>
+
+                        {values.donations.map((_, index) => (
+                          <Grid container key={index} spacing={2}></Grid>
+                        ))}
                       </React.Fragment>
                     )}
                   </FieldArray>
