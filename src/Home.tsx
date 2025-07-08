@@ -89,7 +89,14 @@ export const Home = () => {
                         </Grid>
 
                         {values.donations.map((_, index) => (
-                          <Grid container key={index} spacing={2}></Grid>
+                          <Grid container key={index} spacing={2}>
+                            <Grid>
+                              <Field name={`donations.${index}.institution`} />
+                            </Grid>
+                            <Grid>
+                              <Field name={`donations.${index}.percentage`} />
+                            </Grid>
+                          </Grid>
                         ))}
                       </React.Fragment>
                     )}
