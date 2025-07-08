@@ -115,6 +115,16 @@ export const Home = () => {
                             </Grid>
                           </Grid>
                         ))}
+
+                        <Grid>
+                          <Button
+                            onClick={() =>
+                              push({ institution: '', percentage: 0 })
+                            }
+                          >
+                            Add Donation
+                          </Button>
+                        </Grid>
                       </React.Fragment>
                     )}
                   </FieldArray>

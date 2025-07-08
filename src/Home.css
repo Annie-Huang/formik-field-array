@@ -1,3 +1,6 @@
 .errorColor {
+  /* https://mui.com/material-ui/customization/palette/
+     palette.error.main
+  */
   color: #d32f2f;
 }
