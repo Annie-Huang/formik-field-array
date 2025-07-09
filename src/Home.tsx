@@ -13,11 +13,13 @@ import * as Yup from 'yup';
 import { boolean, number, string } from 'yup';
 import './Home.css';
 
+const emptyDonation = { institution: '', percentage: 0 };
+
 const INITIAL_FORM_STATE = {
   fullName: '',
   donationsAmount: 0,
   termsAndConditions: false,
-  donations: [{ institution: '', percentage: 0 }],
+  donations: [emptyDonation],
 };
 
 const FORM_VALIDATION = Yup.object().shape({
@@ -120,9 +122,8 @@ export const Home = () => {
 
                         <Grid>
                           <Button
-                            onClick={() =>
-                              push({ institution: '', percentage: 0 })
-                            }
+                            variant='contained'
+                            onClick={() => push(emptyDonation)}
                           >
                             Add Donation
                           </Button>
