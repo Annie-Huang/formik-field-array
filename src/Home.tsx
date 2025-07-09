@@ -90,16 +90,18 @@ export const Home = () => {
 
                         {values.donations.map((_, index) => (
                           <Grid container key={index} spacing={2}>
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                               <Field
+                                fullWidth
                                 name={`donations.${index}.institution`}
                                 component={TextField}
                                 label='Institution'
                                 variant='standard'
                               />
                             </Grid>
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                               <Field
+                                fullWidth
                                 name={`donations.${index}.percentage`}
                                 component={TextField}
                                 type='number'
@@ -108,7 +110,7 @@ export const Home = () => {
                               />
                             </Grid>
 
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                               <Button onClick={() => remove(index)}>
                                 Delete
                               </Button>
