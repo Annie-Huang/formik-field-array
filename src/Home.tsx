@@ -10,7 +10,7 @@ import {
 import { Field, FieldArray, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import * as Yup from 'yup';
-import { boolean, number, string } from 'yup';
+import { array, boolean, number, object, string } from 'yup';
 import './Home.css';
 
 const emptyDonation = { institution: '', percentage: 0 };
@@ -29,6 +29,14 @@ const FORM_VALIDATION = Yup.object().shape({
     .max(10, 'Your name needs to be at most 10 characters'),
   donationsAmount: number().required().min(10), // will use the default of 'donationsAmount must be greater than or equal to 10' for min(10)
   termsAndConditions: boolean().required().isTrue(),
+  donations: array(
+    object({
+      institution: string().required().min(3).max(10),
+      percentage: number().required().min(1).max(100),
+    }),
+  )
+    .min(1)
+    .max(3),
 });
 
 export const Home = () => {
