@@ -152,6 +152,16 @@ export const Home = () => {
                         ))}
 
                         <Grid>
+                          {/* Only combine error will has the type of a string:
+                              e.g. "donations": "donations field must have less than or equal to 3 items"
+                              Normal field error will be:
+                              "donations": [
+                                {
+                                  "institution": "Institution name needed",
+                                  "percentage": "Percentage needs to be at least 1%"
+                                }
+                              ]
+                          */}
                           {typeof errors.donations === 'string' ? (
                             <Typography color='error'>
                               {errors.donations}
