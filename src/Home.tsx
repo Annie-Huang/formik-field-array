@@ -41,12 +41,18 @@ const FORM_VALIDATION = Yup.object().shape({
         .max(100, 'Percentage can be at most 100%'),
     }),
   )
+    // In order to see the combine error message below, all the individual field in each item needs to pass first inside the array.
     .min(1)
     .max(3)
     .test((donations) => {
       console.log('donations=', donations);
 
-      return true;
+      const sum = donations?.reduce(
+        (acc, curr) => acc + (curr.percentage || 0),
+        0,
+      );
+
+      return sum === 100;
     }),
 });
 
