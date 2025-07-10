@@ -31,8 +31,14 @@ const FORM_VALIDATION = Yup.object().shape({
   termsAndConditions: boolean().required().isTrue(),
   donations: array(
     object({
-      institution: string().required().min(3).max(10),
-      percentage: number().required().min(1).max(100),
+      institution: string()
+        .required('Institution name needed')
+        .min(3, 'Institution name needs to be at least 3 characters')
+        .max(10, 'Institution name needs to be at most 10 characters'),
+      percentage: number()
+        .required('Percentage needed')
+        .min(1, 'Percentage needs to be at least 1%')
+        .max(100, 'Percentage can be at most 100%'),
     }),
   )
     .min(1)
