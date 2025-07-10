@@ -10,7 +10,7 @@ import {
 import { Field, FieldArray, Form, Formik } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-mui';
 import * as Yup from 'yup';
-import { array, boolean, number, object, string } from 'yup';
+import { array, boolean, number, object, string, ValidationError } from 'yup';
 import './Home.css';
 
 const emptyDonation = { institution: '', percentage: 0 };
@@ -52,7 +52,15 @@ const FORM_VALIDATION = Yup.object().shape({
         0,
       );
 
-      return sum === 100;
+      if (sum !== 100) {
+        return new ValidationError(
+          `Percentage should be 100%, but you have ${sum}%`,
+          undefined,
+          'donations',
+        );
+      }
+
+      return true;
     }),
 });
 
