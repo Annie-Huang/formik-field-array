@@ -42,7 +42,12 @@ const FORM_VALIDATION = Yup.object().shape({
     }),
   )
     .min(1)
-    .max(3),
+    .max(3)
+    .test((donations) => {
+      console.log('donations=', donations);
+
+      return true;
+    }),
 });
 
 export const Home = () => {
