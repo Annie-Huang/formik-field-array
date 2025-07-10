@@ -152,6 +152,14 @@ export const Home = () => {
                         ))}
 
                         <Grid>
+                          {typeof errors.donations === 'string' ? (
+                            <Typography color='error'>
+                              {errors.donations}
+                            </Typography>
+                          ) : null}
+                        </Grid>
+
+                        <Grid>
                           <Button
                             variant='contained'
                             onClick={() => push(emptyDonation)}
