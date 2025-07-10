@@ -92,7 +92,10 @@ export const Home = () => {
 
                         {values.donations.map((_, index) => (
                           <Grid container key={index} spacing={2}>
-                            <Grid size={{ xs: 12, sm: 'auto' }}>
+                            <Grid
+                              size={{ xs: 12, sm: 'auto' }}
+                              className='stretch'
+                            >
                               <Field
                                 fullWidth
                                 name={`donations.${index}.institution`}
@@ -101,7 +104,10 @@ export const Home = () => {
                                 variant='standard'
                               />
                             </Grid>
-                            <Grid size={{ xs: 12, sm: 'auto' }}>
+                            <Grid
+                              size={{ xs: 12, sm: 'auto' }}
+                              className='stretch'
+                            >
                               <Field
                                 fullWidth
                                 name={`donations.${index}.percentage`}

@@ -4,3 +4,7 @@
   */
   color: #d32f2f;
 }
+
+.stretch {
+  flex-grow: 1 !important;
+}
