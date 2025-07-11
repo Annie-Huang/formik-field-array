@@ -78,7 +78,7 @@ export const Home = () => {
             return new Promise((res) => setTimeout(res, 2500));
           }}
         >
-          {({ values, errors, isSubmitting }) => {
+          {({ values, errors, isSubmitting, isValid }) => {
             // console.log('errors', errors);
             return (
               // If you want to keep autoComplete for the input, remove the below.
@@ -209,6 +209,7 @@ export const Home = () => {
 
                   <Grid size={{ xs: 12 }}>
                     <Button
+                      // disabled={!isValid || isSubmitting}
                       disabled={isSubmitting}
                       variant='contained'
                       color='primary'
