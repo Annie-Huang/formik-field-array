@@ -152,7 +152,10 @@ export const Home = () => {
                             </Grid>
 
                             <Grid size={{ xs: 12, sm: 'auto' }}>
-                              <Button onClick={() => remove(index)}>
+                              <Button
+                                disabled={isSubmitting}
+                                onClick={() => remove(index)}
+                              >
                                 Delete
                               </Button>
                             </Grid>
@@ -179,6 +182,7 @@ export const Home = () => {
 
                         <Grid>
                           <Button
+                            disabled={isSubmitting}
                             variant='contained'
                             onClick={() => push(emptyDonation)}
                           >
